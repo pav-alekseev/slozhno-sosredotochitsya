@@ -17,34 +17,44 @@
     <link href="./styles/light.css" rel="stylesheet" />
   </head>
   <body class="page">
-    <header class="header decorated-zone">
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="wrapper">
+      <header class="header decorated-zone">
+        <div class="header__rec" aria-hidden="true"></div>
+        <div class="cover"></div>
+        <nav class="header__theme-menu">
+          <ul class="header__theme-menu-list">
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_light"
+              >
+                День
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+                disabled
+              >
+                Авто
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_dark"
+              >
+                Неон
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="page__title">no focus</h1>
+        <p class="header__text">
+          Что делать, когда не можешь делать ничего<br />
+          Или почему нам так сложно сконцентрироваться, особенно когда очень
+          надо
+        </p>
+      </header>
+    </div>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
