@@ -1,6 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  position: relative;
+
   max-width: 375px;
   padding: 10px;
 
@@ -211,4 +213,11 @@
 
 .link:focus-visible {
   outline: 1px solid #f1b2ce;
+}
+
+/* footer */
+
+.footer {
+  position: relative;
+  padding: 280px 0 270px;
 }
