@@ -295,3 +295,51 @@
     text-align: center;
   }
 }
+
+@media (width >= 1024px) {
+  .page {
+    max-width: 1024px;
+  }
+
+  .cover {
+    opacity: 1;
+  }
+
+  .page__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 290px;
+  }
+
+  .header__theme-menu-list {
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .header__text {
+    width: 491px;
+    margin: 132px 0 58px auto;
+  }
+
+  .section {
+    column-gap: 20px;
+    grid-template-columns: 315px 1fr;
+  }
+
+  .section_images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .articles-list__concentration {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer {
+    padding: 315px 0;
+  }
+}
