@@ -1,12 +1,29 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: var(--color-purple-2);
+  --secondary-color: var(--color-purple-2);
+  --secondary-color-light: var(--color-purple-2-light);
+  --brand-color: var(--color-purple-1);
+  --highlight-color: var(--color-black-1);
+  --text-color: var(--color-pink-2);
+
+  --page-background-color: var(--color-black-1);
+  --cover-background-image: url("../images/cover-image-dark.png");
+
+  --rec-visible: visible;
+}
+
+@media (prefers-color-scheme: light) {
+  .page.theme_auto {
+    --accent-color: var(--color-purple-2);
+    --secondary-color: var(--color-purple-2);
+    --secondary-color-light: var(--color-purple-2-light);
+    --brand-color: var(--color-purple-1);
+    --highlight-color: var(--color-black-1);
+    --text-color: var(--color-pink-2);
+
+    --page-background-color: var(--color-black-1);
+    --cover-background-image: url("../images/cover-image-dark.png");
+
+    --rec-visible: visible;
+  }
 }

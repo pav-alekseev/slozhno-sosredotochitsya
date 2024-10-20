@@ -1,4 +1,18 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+.page {
+  /* common tokens */
+  --page-font-family: "IBM Plex mono", monospace;
+
+  /* dark tokens */
+  --color-purple-1: #db00ff;
+  --color-purple-2: #ff0070;
+  --color-purple-2-light: #ff007040;
+  --color-black-1: #000028;
+
+  /* light tokens */
+  --color-pink-1: #fff1f7;
+  --color-pink-2: #f1b2ce;
+  --color-pink-3: #ffc2e6;
+  --color-pink-4: #ff8dcb;
+  --color-black-2: #353430;
+  --color-black-2-light: #35343040;
+}
