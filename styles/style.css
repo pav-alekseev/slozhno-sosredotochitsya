@@ -1,3 +1,11 @@
+body {
+  background-image: var(--cover-background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
@@ -13,31 +21,21 @@
   background-color: var(--page-background-color);
 }
 
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: -10px;
-
-  background-image: var(--cover-background-image);
-  background-position: center;
-  background-size: cover;
-
-  opacity: 0.5;
-  z-index: -1;
-}
-
 /* header */
 
 .header {
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   padding-bottom: 56px;
+  height: 100vh;
+  min-height: 668px;
   color: var(--secondary-color);
 }
 
 .header__rec {
   position: absolute;
+  top: 0;
   right: 9px;
   display: flex;
   align-items: center;
@@ -83,7 +81,8 @@
 }
 
 .header__theme-menu {
-  padding: 65px 0;
+  justify-self: end;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -119,6 +118,8 @@
 }
 
 .page__title {
+  align-self: flex-start;
+  justify-self: center;
   color: var(--brand-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
@@ -127,7 +128,8 @@
 }
 
 .header__text {
-  margin-top: 55px;
+  align-self: center;
+  justify-self: end;
   color: var(--highlight-color);
   background: var(--accent-color);
   font-weight: 700;
@@ -210,7 +212,7 @@
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .link:focus {
@@ -225,7 +227,11 @@
 
 .footer {
   position: relative;
-  padding: 280px 0 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 668px;
 }
 
 /* adaptive screens */
@@ -241,12 +247,7 @@
     left: -20px;
   }
 
-  .header__theme-menu {
-    padding: 172px 0 173px;
-  }
-
   .header__text {
-    margin: 166px 0 105px auto;
     width: 364px;
   }
 
@@ -311,9 +312,10 @@
   }
 
   .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
     display: flex;
     justify-content: center;
-    padding: 0 0 290px;
   }
 
   .header__theme-menu-list {
@@ -323,7 +325,6 @@
 
   .header__text {
     width: 491px;
-    margin: 132px 0 58px auto;
   }
 
   .section {
