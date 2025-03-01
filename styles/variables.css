@@ -1,6 +1,7 @@
 .page {
   /* common tokens */
   --page-font-family: "IBM Plex mono", monospace;
+  --cover-background-image: url('./images/background.jpg');
 
   /* dark tokens */
   --color-purple-1: #db00ff;

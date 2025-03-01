@@ -1,9 +1,17 @@
+body {
+  background-image: var(--cover-background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
   position: relative;
 
-  max-width: 375px;
+  max-width: 100%;
   padding: 10px;
 
   font-family: var(--page-font-family, monospace);
@@ -13,31 +21,19 @@
   background-color: var(--page-background-color);
 }
 
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: -10px;
-
-  background-image: var(--cover-background-image);
-  background-position: center;
-  background-size: cover;
-
-  opacity: 0.5;
-  z-index: -1;
-}
-
 /* header */
 
 .header {
   position: relative;
-  padding-bottom: 56px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  height: calc(100vh - 20px);
   color: var(--secondary-color);
 }
 
 .header__rec {
   position: absolute;
+  top: 0;
   right: 9px;
   display: flex;
   align-items: center;
@@ -83,7 +79,8 @@
 }
 
 .header__theme-menu {
-  padding: 65px 0;
+  justify-self: end;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -113,6 +110,10 @@
   border: 1px solid var(--secondary-color-light);
 }
 
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
 .header__theme-menu-button_active {
   border: 1px solid var(--secondary-color);
   pointer-events: none;
@@ -127,7 +128,8 @@
 }
 
 .header__text {
-  margin-top: 55px;
+  align-self: center;
+  justify-self: end;
   color: var(--highlight-color);
   background: var(--accent-color);
   font-weight: 700;
@@ -205,12 +207,12 @@
 }
 
 .link {
-  text-shadow: 2px 2px 0 var(--secondary-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .link:focus {
@@ -225,14 +227,22 @@
 
 .footer {
   position: relative;
-  padding: 280px 0 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 668px;
+}
+
+.footer__title {
+  align-self: center;
+  justify-self: center;
 }
 
 /* adaptive screens */
 
 @media (width >= 768px) {
   .page {
-    max-width: 768px;
     padding: 20px;
   }
 
@@ -240,13 +250,12 @@
     position: relative;
     left: -20px;
   }
-
-  .header__theme-menu {
-    padding: 172px 0 173px;
+  
+  .header {
+    height: calc(100vh - 40px);
   }
 
   .header__text {
-    margin: 166px 0 105px auto;
     width: 364px;
   }
 
@@ -293,15 +302,12 @@
 
   .footer {
     padding: 440px 0 445px;
+    height: calc(100vh - 40px);
     text-align: center;
   }
 }
 
 @media (width >= 1024px) {
-  .page {
-    max-width: 1024px;
-  }
-
   .cover {
     opacity: 1;
   }
@@ -311,9 +317,10 @@
   }
 
   .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
     display: flex;
     justify-content: center;
-    padding: 0 0 290px;
   }
 
   .header__theme-menu-list {
@@ -323,7 +330,6 @@
 
   .header__text {
     width: 491px;
-    margin: 132px 0 58px auto;
   }
 
   .section {
