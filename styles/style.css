@@ -114,6 +114,11 @@ body {
   border-bottom: 1px solid var(--secondary-color);
 }
 
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
 .header__theme-menu-button_active {
   border: 1px solid var(--secondary-color);
   pointer-events: none;
@@ -230,8 +235,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  min-height: 668px;
+  height: calc(100vh - 20px);
 }
 
 .footer__title {
@@ -244,6 +248,10 @@ body {
 @media (width >= 768px) {
   .page {
     padding: 20px;
+  }
+
+  .page__title {
+    line-height: 99px;
   }
 
   .page__title_ofset {
@@ -314,6 +322,7 @@ body {
 
   .page__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 129.53px;
   }
 
   .header__theme-menu {
